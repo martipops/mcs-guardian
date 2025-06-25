@@ -1,0 +1,29 @@
+{
+  "debug": true,
+  "discord": {
+    "token": "MTM41234567890qwertyuioasdfghjkxcvbnm-vSeEywSPgL8os",
+    "channelId": "098374098721340987"
+  },
+  "minecraft": {
+    "rcon": {
+      "host": "localhost",
+      "port": 25575,
+      "password": "password"
+    },
+    "logs": {
+      "file_path": "../logs/latest.log",
+      "message_whitelist": [
+        {
+          "discord_message_prefix": "",
+          "regex": ".*\\[Server thread/INFO\\] \\[net.minecraft.server.MinecraftServer/\\]: \\<",
+          "remove_regex": "^.*\\]: "
+        },
+        {
+          "discord_message_prefix": "",
+          "regex": "joined the game|left the game",
+          "remove_regex": "^.*\\]: "
+        }
+      ]
+    }
+  }
+}
